@@ -20,7 +20,7 @@ HEADERS = {
 }
 def run():
     with sync_playwright() as p:
-        browser = p.chromium.launch(channel="chrome", headless=False) 
+        browser = p.chromium.launch(channel="chrome", headless=True) 
         page = browser.new_page()
         
         print("Navigating to website...")
