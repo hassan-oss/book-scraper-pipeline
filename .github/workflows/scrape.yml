@@ -3,7 +3,7 @@ name: Daily Book Scraper & Cloud Sync
 on:
   schedule:
     - cron: '0 8 * * *' # Runs every day at 8:00 AM UTC
-  workflow_dispatch:     # Allows you to trigger it manually from GitHub anytime
+  workflow_dispatch:      # Allows you to trigger it manually from GitHub anytime
 
 jobs:
   scrape-and-sync:
@@ -20,8 +20,8 @@ jobs:
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
-          pip install -r requirements.txt
-          playwright install chromium
+          pip install playwright supabase websockets
+          playwright install --with-deps chromium
 
       - name: Run Python Scraper Script
         env:
