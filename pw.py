@@ -5,7 +5,7 @@ from playwright.async_api import async_playwright
 from supabase import create_client, Client
 
 # Supabase Credentials from Environment Variables
-SUPABASE_URL = "https://enpaoyytmshedndwssbx.supabase.co/rest/v1/books?on_conflict=title"  # <--- Replace with your actual Supabase URL
+SUPABASE_URL = "https://enpaoyytmshedndwssbx.supabase.co"  # <--- Replace with your actual Supabase URL
 SUPABASE_KEY = os.environ.get("SUPABASE_KEY","eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImVucGFveXl0bXNoZWRuZHdzc2J4Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3OTE5OTA2OTEsImV4cCI6MjEwNzU2NjY5MX0.Yt0dqdA2muGZHLYnMogPtXTumj6omJa2ydaeIA6J8uo")
 
 if not SUPABASE_KEY:
