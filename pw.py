@@ -104,7 +104,7 @@ async def scrape_all_books():
         for i in range(0, len(all_books), batch_size):
             batch = all_books[i:i + batch_size]
             # Upsert using 'title' as unique constraint key
-            supabase.table("books").upsert(batch, on_conflict="title").execute()
+            supabase.table("books").upsert(batch).execute()
 
         print("Successfully synced all books to Supabase database!")
 
